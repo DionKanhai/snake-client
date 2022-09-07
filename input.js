@@ -43,9 +43,12 @@ const handleUserInput = function (key) {
 
     if (key === 'd' || key === 'D') {
       connection.write('Move: right')
-    }; 
+    };
+    // Display message next to snake in server
+    if (key === '#') {
+      connection.write('Say: NOO')
+    }
 };
-
 
 
 // export variable
