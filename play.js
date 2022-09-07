@@ -1,31 +1,11 @@
 // import Node's net lib 
 const net = require('net');
 // use ES6 shorthand syntax to import object containing 
-// connect function in client file
+// connect and setupInput functions from their respective files
 const { connect } = require('./client');
+const { setupInput } = require('./input')
 
-
+console.log('Connectiong ...');
 connect();
-
-// setup interface to handle user input from stdin (standard input)
-// allows us to listen for keyboard input and react to it
-
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding('utf8');
-  stdin.resume();
-  // event listener 
-  stdin.on('data', handleUserInput);
-  
-  return stdin;
-};
-
-// terminate the game when ctrl+c is entered by user
-const handleUserInput = function (key) {
-    if (key === '\u0003') {
-      process.exit();
-    } 
-};
 
 setupInput();
