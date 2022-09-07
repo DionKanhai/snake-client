@@ -5,7 +5,8 @@ const net = require('net');
 const { connect } = require('./client');
 const { setupInput } = require('./input')
 
-console.log('Connectiong ...');
-connect();
 
-setupInput();
+console.log('Connecting ...');
+
+// pass the object returned from connect to setupInput
+setupInput(connect());
