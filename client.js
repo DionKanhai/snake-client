@@ -14,13 +14,20 @@ const connect = function () {
   });
 
   // use a connect handler to log message when connected to server
-  conn.on('connect', (connected) => {
-    console.log('Successfully connected to the game server', connected);
+  conn.on('connect', () => {
+    console.log('Successfully connected to the game server');
     // upon connection adds this name to the server side
     conn.write('Name: DKS');
+    // // conn.write sends a message to the server and the server will 
+    // // receive the message and know what to do with it
+    // setInterval( () => {
+    //   conn.write('Move: up')
+    // },2000)
+    // setInterval( () => {
+    //   conn.write('Move: up')
+    // },3000)
   });
-  
-
+    
   //event handler that receives data from the server to the client
   conn.on('data', (data) => {
     console.log('Server says: ', data)
