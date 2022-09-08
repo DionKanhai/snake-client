@@ -3,13 +3,11 @@ const net = require('net');
 
 const { IP, PORT } = require('./constants');
 
-// establishes a connection with the game server
-// used createConnection (found in the net lib) to create 
-// an object named conn 
-
-// the conn object represents the CONNECTION you have
-// with the server
+// function that creates a connection to the server 
+// and the client (in this case the localhost)
 const connect = function () {
+// conn object represents the connection you have
+// with the server
   const conn = net.createConnection({
     host: IP, 
     port: PORT
@@ -20,14 +18,6 @@ const connect = function () {
     console.log('Successfully connected to the game server');
     // upon connection adds this name to the server side
     conn.write('Name: DKS');
-    // // conn.write sends a message to the server and the server will 
-    // // receive the message and know what to do with it
-    // setInterval( () => {
-    //   conn.write('Move: up')
-    // },2000)
-    // setInterval( () => {
-    //   conn.write('Move: up')
-    // },3000)
   });
     
   //event handler that receives data from the server to the client
@@ -41,6 +31,7 @@ const connect = function () {
   return conn;
 };
 
+// enable connect function for export
 module.exports = {
     
   connect

@@ -6,8 +6,10 @@ const { INPUTKEYS } = require('./constants');
 // Stores the active TCP connection object
 let connection;
 
+// create a function that will take in user input 
+// and relay it to the server
 const setupInput = function (conn) {
-  // ref the conn object 
+  // ref the conn object in client file 
   connection = conn;
 
   const stdin = process.stdin;
@@ -16,11 +18,6 @@ const setupInput = function (conn) {
   stdin.resume();
   // event listener 
   stdin.on('data', handleUserInput);
-  // stdin.on('data', handleUserInput);
-  // complete version of the callback above
-  // stdin.on('data', (key) => {
-  //   handleUserInput(key)
-  // })
   return stdin;
 };
 

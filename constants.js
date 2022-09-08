@@ -1,4 +1,4 @@
-// variables to store 
+// variables to store IP and Port
 const IP = 'localhost'
 const PORT = 50541
 
@@ -11,6 +11,7 @@ const INPUTKEYS = {
   '#': 'Say: NOO'
 }
 
+// export the constants
 module.exports = {
   IP, 
   PORT, 
