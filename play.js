@@ -4,7 +4,7 @@ const net = require('net');
 // Import object containing connect 
 //and setupInput functions from their respective files
 const { connect } = require('./client');
-const { setupInput } = require('./input')
+const { setupInput } = require('./input');
 
 console.log('Connecting ...');
 

@@ -1,6 +1,6 @@
 // variables to store IP and Port
-const IP = 'localhost'
-const PORT = 50541
+const IP = 'localhost';
+const PORT = 50541;
 
 // object for user input keys
 const INPUTKEYS = {
