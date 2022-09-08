@@ -8,7 +8,8 @@ const INPUTKEYS = {
   'a': 'Move: left',
   's': 'Move down', 
   'd': 'Move right',
-  '#': 'Say: NOO'
+  '#': 'Say: NOO',
+  'h': 'Say: HI!'
 }
 
 // export the constants
