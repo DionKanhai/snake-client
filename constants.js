@@ -6,8 +6,8 @@ const PORT = 50541;
 const INPUTKEYS = {
   'w': 'Move: up',
   'a': 'Move: left',
-  's': 'Move down', 
-  'd': 'Move right',
+  's': 'Move: down', 
+  'd': 'Move: right',
   '#': 'Say: NOO',
   'h': 'Say: HI!'
 }
